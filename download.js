@@ -19,7 +19,7 @@ function print(data) {
             console.log("processing");
             break;
         case 'completed':
-            console.log(`test: ${data.text}`);
+            console.log(data.text);
             break;
         default:
             console.log(`Something went wrong: ${data.status}`);

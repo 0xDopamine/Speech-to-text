@@ -1,6 +1,6 @@
-require('dotenv').config();
-const fetch = require('node-fetch');
-const fs = require('fs');
+import {} from 'dotenv/config'
+import fetch from 'node-fetch';
+import fs from 'fs';
 const url = 'https://api.assemblyai.com/v2/upload';
 
 let args = process.argv.slice(2);
@@ -11,7 +11,7 @@ fs.readFile(audioPath, (err, data) => {
         return console.log(err);
     const params = {
         headers: {
-            "authorization": process.env.ASSEMBLYAI_API_KEY.ASSEMBLYAI_API_KEY,
+            "authorization": process.env.ASSEMBLYAI_API_KEY,
             "Transfer-Encoding": "chunked"
         },
         body: data,
@@ -27,4 +27,3 @@ fs.readFile(audioPath, (err, data) => {
             console.error(`Error: ${error}`);
         });
 });
-

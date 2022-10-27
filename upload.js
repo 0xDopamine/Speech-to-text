@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import fetch from node-fetch;
+import fetch from 'node-fetch';
 const url = 'https://api.assemblyai.com/v2/transcript';
 
 let args = process.argv.slice(2);
@@ -21,8 +21,7 @@ const params = {
 fetch(url, params)
     .then(response => response.json())
     .then(data => {
-        console.log("Success: ", data);
-        console.log('ID: ', data['id']);
+        console.log(data.id);
     })
     .catch((error) => {
         console.error('Error: ', error);

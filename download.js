@@ -12,3 +12,26 @@ const params = {
     method: "GET"
 };
 
+function print(data) {
+    switch(data.status) {
+        case 'queued':
+        case 'processing':
+            console.log("processing");
+            break;
+        case 'completed':
+            console.log(`test: ${data.text}`);
+            break;
+        default:
+            console.log(`Something went wrong: ${data.status}`);
+            break;
+    }
+}
+
+fetch(url, params)
+    .then(response => response.json())
+    .then(data => {
+        print(data);
+    })
+    .catch((error) => {
+        console.error(`Error: ${error}`);
+    });

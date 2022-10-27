@@ -21,7 +21,7 @@ fs.readFile(audioPath, (err, data) => {
     fetch(url, params)
         .then(response => response.json())
         .then(data => {
-            console.log(`URL: ${data['upload_url']}`)
+            console.log(data['upload_url'])
         })
         .catch((error) => {
             console.error(`Error: ${error}`);

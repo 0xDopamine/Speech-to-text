@@ -5,7 +5,7 @@ Using AssemblyAI API.
 
 
 To test it:
--Run script.sh and pass the path to the audio file as an argument
+-Run "sh script.sh <path to audio file>"
 (it could take a while to process the audio but be patient)
 -The transcript is outputted to a file called "output".
 

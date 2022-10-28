@@ -5,6 +5,8 @@ RES=$($CMD)
 while [ "$RES" == "processing" ];
 do
     RES=$($CMD)
+    echo "waiting.."
+    sleep 2
 done
 echo "Done Successfully"
 echo $RES > output
